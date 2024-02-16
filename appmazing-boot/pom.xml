@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.campusdual.appmazing</groupId>
+		<artifactId>appmazing</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<artifactId>appmazing-boot</artifactId>
+	<name>${project.groupId}:${project.artifactId}</name>
+	<packaging>jar</packaging>
+
+	<properties>
+		<start-class>com.campusdual.appmazing.ServerApplication</start-class>
+		<spring-boot.repackage.skip>false</spring-boot.repackage.skip>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>appmazing-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>appmazing-model</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>appmazing-ws</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>appmazing-frontend</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
+		</dependency>
+
+		<!-- Ontimize Boot -->
+		<dependency>
+			<groupId>com.ontimize.boot</groupId>
+			<artifactId>ontimize-boot-starter-jdbc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.ontimize.boot</groupId>
+			<artifactId>ontimize-boot-starter-rest</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.ontimize.boot</groupId>
+			<artifactId>ontimize-boot-starter-webaddons</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>${project.artifactId}</finalName>
+	</build>
+</project>
